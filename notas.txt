@@ -1,0 +1,26 @@
+Valorizar apps para o end user
+
+Valorizar cloud
+
+Coisas que se faz no telemóvel mas nem pensamos no pc (ou é mobile first)
+
+
+COMO É QUE AVALIO O PROJETO DE ANDROID
+A - cumprimentos de objetivos de um trabalho mobile first 
+B - Complexidade da implementação
+	Bluetooth vs firebase
+	modelos de arquitetura de desenvolvimento por android
+C - Esforço
+
+Quase obrigatório Câmara e Geo (google maps preferencialmente)
+
+
+PDA 
+Personal Digital Assistant
+
+------------------------------------------------------------------------------------------------------------------------
+Tag -> Generally name of the class
+onResume and onPause called when the activity gains/loses focus
+Configuration change causes onDestroy() to be called
+remember -> remember state through transitions
+rememberSaveable -> remember state through recompositions AND configuration changes
