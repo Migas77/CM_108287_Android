@@ -82,9 +82,73 @@ fun main() {
     printCityTemperature("Guatemala City", 50, 55, 7)
 
 
+    // 12.
+    val waterFilter = {level: String -> level.repeat(2)}
+    println(encodeMsg(waterFilter, "mensagem"))
 
 
+    val a = A()
+    val b = B(2)
+    val c = C(3)
+    val d = D(4)
+    val e = E(5)
+    println(a)
+    b.cenas = 10
+    println(b.cenas)
+    // c.cenas = 10 // Kotlin: Val cannot be reassigned
+    println(c.cenas)
+    // println(d.cenas) Kotlin: Unresolved reference: cenas
+    println(e.cenas)
+
+    val cenas: Int
+    cenas = 69
+    println(cenas)
+
+    class Circle(val radius:Double) {
+        constructor(name:String) : this(1.0)
+        constructor(diameter:Int) : this(diameter / 2.0) {
+            println("in diameter constructor")
+        }
+        init {
+            println("Area: ${Math.PI * radius * radius}")
+        }
+    }
+    val j = Circle(3.0)
 }
+fun encodeMsg(encode: (String) -> String, msg: String): String {
+    return encode(msg)
+}
+
+fun wrongFunc(cenas: Int){
+    // val-> Kotlin: 'val' on function parameter is not allowed
+    // var -> Kotlin: 'var' on function parameter is not allowed
+    // just cenas -> Kotlin: A type annotation is required on a value parameter
+}
+
+class A{}
+class B(var cenas: Int){
+}
+class C(val cenas: Int){}
+
+class D(cenas: Int){}
+
+class E(cenas: Int){
+    val cenas: Int;
+    init {
+        this.cenas = cenas
+    }
+}
+
+class House {
+    val color: String = "white"
+    val numberOfWindows: Int = 2
+    val isForSale: Boolean = false
+
+    fun updateColor(newColor: String){}
+}
+
+
+
 
 fun add(firstNumber: Number, secondNumber: Number): Double{
     """
